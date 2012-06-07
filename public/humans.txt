@@ -1,0 +1,17 @@
+/* TEAM */
+  Dev: Michael D. Hall
+  Contact: mdh [at] just3ws.com
+  Twitter: @just3ws
+  From: Crystal Lake, Illinois, USA
+
+/* THANKS */
+
+  Chronic RubyGem: Tom Preston-Werner
+  Twitter: @mojombo
+  From: San Francisco, California, USA
+
+/* SITE */
+  Last update:2012/06/07
+  Language:English
+  Doctype:HTML5, JSON
+  IDE: MacVim
