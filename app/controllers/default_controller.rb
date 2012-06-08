@@ -8,8 +8,9 @@ class DefaultController < ApplicationController
     Chronic.time_class = ActiveSupport::TimeZone["UTC"]
 
     @utc      = Chronic.parse(@q)
-    @local    = get_local_time_from_offset(@utc, @offset)
-    @timezone = get_timezone_name_from_offset(@offset)
+    @valid    = !(@utc.nil?)
+    @local    = @valid ? get_local_time_from_offset(@utc, @offset) : ''
+    @timezone = @valid ? get_timezone_name_from_offset(@offset) : ''
 
     render 'parse', formats: 'json'
   end
@@ -25,8 +26,10 @@ class DefaultController < ApplicationController
   end
 
   def get_timezone_name_from_offset(offset = 0)
-    ActiveSupport::TimeZone::MAPPING.keys.find { |tz_name|
-      ActiveSupport::TimeZone[tz_name].utc_offset == 3600 * offset
-    }
+    local_offset = 3600 * offset
+
+    ActiveSupport::TimeZone::MAPPING.keys.find do |tz_name|
+      ActiveSupport::TimeZone[tz_name].utc_offset == local_offset
+    end
   end
 end
