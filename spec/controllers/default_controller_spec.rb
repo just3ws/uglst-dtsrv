@@ -20,8 +20,6 @@ describe DefaultController do
 
       body = JSON(response.body)
 
-      p body
-
       body["q"].should == date
 
       body["valid"].should        be_true
