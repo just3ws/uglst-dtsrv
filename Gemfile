@@ -19,5 +19,5 @@ end
 
 # used for the IP geolocation integration
 gem 'geocoder'
-#gem "hiredis"
-gem "redis" #, :require => ["redis", "redis/connection/hiredis"]
+gem "hiredis"
+gem "redis", :require => ["redis", "redis/connection/hiredis"]
