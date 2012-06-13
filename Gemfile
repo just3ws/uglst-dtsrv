@@ -7,6 +7,10 @@ gem 'chronic'
 gem 'thin'
 gem 'foreman'
 
+group :production do
+  gem 'newrelic_rpm'
+end
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'pry'
