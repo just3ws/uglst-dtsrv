@@ -26,7 +26,7 @@ describe DefaultController do
       body["utc"].should_not      be_empty
       body["local"].should_not    be_empty
       body["offset"].should_not   be_nil
-      body["timezone"].should_not be_empty
+      body["offset_timezone"].should_not be_empty
 
       response.should be_success
     end
