@@ -3,4 +3,4 @@ json.valid @valid
 json.utc @utc
 json.offset @offset
 json.local @local
-json.timezone @timezone
+json.offset_timezone @offset_timezone
