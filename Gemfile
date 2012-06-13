@@ -9,9 +9,7 @@ gem 'pg'
 gem 'thin'
 gem 'foreman'
 
-group :production do
-  gem 'newrelic_rpm'
-end
+gem 'newrelic_rpm'
 
 group :test, :development do
   gem 'rspec-rails'
