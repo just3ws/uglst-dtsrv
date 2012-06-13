@@ -4,6 +4,8 @@ gem 'rails', '3.2.5'
 gem 'jbuilder'
 gem 'chronic'
 
+gem 'geocoder'
+
 gem 'pg'
 
 gem 'thin'
