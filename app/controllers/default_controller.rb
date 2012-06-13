@@ -2,10 +2,6 @@ require 'chronic'
 
 class DefaultController < ApplicationController
   def parse
-    puts request.ip # =>  "50.9.63.9"
-    puts request.location.city # =>  "Matteson"
-    puts request.location.country
-
     @q      = (params[:q] || Time.now.utc.to_s).strip.downcase
     @offset = Integer(params[:offset] || 0)
 
