@@ -1,4 +1,3 @@
-# config/initializers/geocoder.rb
 Geocoder.configure do |config|
 
   ## geocoding service (see below for supported options):
@@ -14,6 +13,6 @@ Geocoder.configure do |config|
   #config.units = :km
 
   # caching (see below for details):
-  #config.cache = Redis.new
+  config.cache = Redis.new
   #config.cache_prefix = "..."
 end
