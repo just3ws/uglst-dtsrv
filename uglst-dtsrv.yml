@@ -4,7 +4,6 @@ socket_name: uglst-dtsrv
 rvm: ruby-1.9.3-perf@uglst-dtsrv
 pre:
   - "pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start | :"
-  - "redis-server /usr/local/etc/redis.conf | : &"
 tabs:
   - editor:
       layout: main-vertical
